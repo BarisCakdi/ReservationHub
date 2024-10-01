@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using ReservationHub.Data;
+
 namespace ReservationHub
 {
     public class Program
@@ -8,6 +11,10 @@ namespace ReservationHub
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
 
             var app = builder.Build();
 
