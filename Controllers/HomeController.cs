@@ -19,6 +19,29 @@ namespace ReservationHub.Controllers
             return View();
         }
 
+        [Route("Camp")]
+        public IActionResult Camp()
+        {
+            return View();
+        }
+        
+        [Route("City")]
+        public IActionResult City()
+        {
+            return View();
+        }
+        
+        [Route("Insurance")]
+        public IActionResult Insurance()
+        {
+            return View();
+        }
+        
+        [Route("Contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
      
     }
 }
